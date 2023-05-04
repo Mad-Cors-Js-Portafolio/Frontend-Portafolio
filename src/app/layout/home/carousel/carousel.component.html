@@ -1,1 +1,20 @@
-<p>carousel works!</p>
+<div *ngIf="images && images.length > 0" class="grid grid-cols-1 justify-items-center carousel-container ">
+  <div class="relative ">
+    <img *ngFor="let image of images; let i=index"
+    [src]="image.imageSrc"
+    [alt]="image.imageAlt"
+    [ngClass]="{'image-active': selectedIndex === i}"
+    >
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <button class="btn btn-circle" (click)="onPrevClick()">❮</button>
+      <button class="btn btn-circle" (click)="onNextClick()">❯</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>

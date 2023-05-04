@@ -1,0 +1,6 @@
+.carousel-container img{
+  display: none;
+}
+.carousel-container img.image-active{
+  display: block;
+}
